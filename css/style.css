@@ -1,0 +1,42 @@
+/* <style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+</style> */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  background-color: #6d6e77;
+  background-image: url("/images/football_767.jpg");
+  background-repeat: no-repeat;
+  /* background-position: center top; */
+  background-size: cover;
+}
+
+.header::after {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  /* background-color: #0a0d35; */
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.6;
+
+.container {
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+}
+
+.logo {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 33px;
+  width: 94px;
+  height: 33px;
+  fill: #ffffff;
+}
