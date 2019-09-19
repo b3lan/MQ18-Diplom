@@ -10,8 +10,25 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  padding: 33px 20px 84px 20px;
+  padding: 32px 20px 84px 20px;
   position: relative;
+}
+
+@media (min-width: 601px) {
+  .header {
+    background-image: url("https://raw.githubusercontent.com/b3lan/MQ18-Diplom/master/images/football_1280.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 40px 32px 92px 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    background-image: url("https://raw.githubusercontent.com/b3lan/MQ18-Diplom/master/images/football_1920.jpg");
+    padding: 45px 15px 110px 12px;
+  }
 }
 
 .header::after {
@@ -30,6 +47,9 @@ body {
   position: relative;
   display: flex;
   z-index: 2;
+  margin-right: auto;
+  margin-left: auto;
+  /* width: 100%; */
 }
 
 .logo {
@@ -39,13 +59,24 @@ body {
   fill: #ffffff;
 }
 
-.welcome-tittle {
+@media (min-width: 601px) {
+  .logo {
+    width: 205px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 191px;
+  }
+}
+
+.welcome-title {
   position: relative;
   display: flex;
+  width: 90%;
   z-index: 2;
-  margin-top: 137px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 137px auto 90px auto;
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
@@ -55,10 +86,52 @@ body {
   flex-wrap: wrap;
 }
 
+@media (min-width: 601px) {
+  .welcome-title {
+    margin-bottom: 312px;
+    margin-top: 181px;
+    font-size: 64px;
+    letter-spacing: 3.2px;
+    line-height: 77px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome-title {
+    margin-bottom: 314px;
+    margin-top: 295px;
+    font-size: 90px;
+    letter-spacing: 4.5px;
+    line-height: 100px;
+    max-width: 1530px;
+  }
+}
+
 .welcome:nth-child(2) {
   margin-top: 31px;
   margin-left: 40px;
-  margin-bottom: 90px;
+}
+
+@media (min-width: 601px) {
+  .welcome:nth-child(2) {
+    margin-top: 0px;
+    margin-left: 108px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome:nth-child(2) {
+    margin-top: 0px;
+    margin-left: auto;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-button {
@@ -71,15 +144,35 @@ body {
   border-radius: 17px;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   text-decoration: none;
   text-transform: uppercase;
   color: #ffffff;
 }
 
-.container-button:nth-child(2n) {
-  margin-top: 14px;
+@media (max-width: 600px) {
+  .container-button:nth-child(2n) {
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: 601px) {
+  .container-button {
+    width: 310px;
+    height: 77px;
+    border-radius: 40px;
+  }
+
+  .container-button:nth-child(2n) {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-button:nth-child(2n) {
+    margin-left: 50px;
+  }
 }
 
 .container-button:hover {
@@ -92,10 +185,18 @@ body {
 
 .download-button {
   padding-left: 82px;
-  /* margin-right: auto; */
-  /* width: 150px; */
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (min-width: 601px) {
+  .download-button {
+    padding-left: 41px;
+  }
+
+  .container-button:nth-child(2n) .download-button {
+    padding-left: 57px;
+  }
 }
 
 .download-icon {
@@ -105,8 +206,48 @@ body {
   margin-right: 10px;
 }
 
+.container-button:nth-child(2n+1) .download-icon {
+  padding-bottom: 4px;
+}
+
+@media (min-width: 601px) {
+  .download-icon {
+    width: 45px;
+    height: 47px;
+    margin-right: 28px;
+  }
+
+  .container-button:nth-child(2n+1) .download-icon {
+    padding-bottom: 8px;
+    width: 44px;
+    height: 46px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .download-icon {
+    width: 45px;
+    height: 54px;
+    margin-right: 28px;
+  }
+
+  .container-button:nth-child(2n+1) .download-icon {
+    padding-bottom: 8px;
+    width: 44px;
+    height: 46px;
+  }
+}
+
 .download-text-button {
   letter-spacing: 0.4px;
+}
+
+@media (min-width: 601px) {
+  .download-text-button {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    line-height: 17px;
+  }
 }
 
 .download-text {
@@ -133,11 +274,54 @@ body {
   padding-top: 24px;
 }
 
+
+@media (min-width: 601px) {
+  .athlets {
+    padding-top: 86px;
+  }
+
+  .players {
+    padding-top: 86px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .athlets {
+    padding-top: 116px;
+  }
+
+  .players {
+    padding-top: 116px;
+  }
+}
+
 .main-title {
   text-transform: uppercase;
   font-size: 50px;
+  line-height: 60px;
   color: #e7e7e7;
   margin: 0px 0px 224px 20px;
+}
+
+@media (min-width: 601px) {
+  .main-title {
+    font-size: 80px;
+    margin: 0px 30px 0px 292px;
+  }
+
+  .players .main-title {
+    margin: 0px 292px 0px 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title {
+    margin-left: 52.5%;
+  }
+
+  .players .main-title {
+    margin: 0px 52.5% 0px 10%;
+  }
 }
 
 .footballer {
@@ -147,6 +331,20 @@ body {
   left: 70px;
 }
 
+@media (min-width: 601px) {
+  .footballer {
+    top: 94px;
+    left: -162px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footballer {
+    top: 27px;
+    left: 392px;
+  }
+}
+
 .basketballer {
   position: absolute;
   z-index: 1;
@@ -154,13 +352,55 @@ body {
   left: 10px;
 }
 
+@media (min-width: 601px) {
+  .basketballer {
+    top: 39px;
+    left: 332px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .basketballer {
+    top: 27px;
+    left: 804px;
+  }
+}
+
 .content {
-  padding: 60px 20px 50px 20px;
+  padding: 44px 30px 50px 20px;
   background-color: #fafafa;
 }
 
-.content:nth-child(3n) {
-  padding-top: 83px;
+@media (max-width: 600px) {
+  .content:nth-child(3n) {
+    padding-top: 83px;
+  }
+}
+
+@media (min-width: 601px) {
+  .content {
+    padding: 45px 30px 35px 292px;
+    background-color: #ffffff;
+  }
+
+  .players .content {
+    padding: 45px 292px 35px 30px;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    padding: 60px 10% 55px 52.5%;
+  }
+
+  .players .content {
+    padding: 60px 50.5% 55px 10%;
+  }
+
+  .content:nth-child(3n) {
+    padding-top: 110px;
+  }
 }
 
 .content:nth-child(3n+1) {
@@ -175,7 +415,6 @@ body {
   background-color: #090c35;
 }
 
-
 .container-content-title {
   display: flex;
   position: relative;
@@ -189,6 +428,14 @@ body {
   letter-spacing: 0.7px;
 }
 
+@media (min-width: 601px) {
+  .number-title {
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 0.9px;
+  }
+}
+
 .number-title::after {
   content: "";
   border: 1px solid #5e42b0;
@@ -199,6 +446,24 @@ body {
   border-radius: 1.5px;
 }
 
+.content:nth-child(3n-1) .number-title::after {
+  border: 1px solid #ffffff;
+}
+
+@media (min-width: 601px) {
+  .number-title::after {
+    border: 2px solid #5e42b0;
+    width: 18px;
+    left: 0px;
+    top: 30px;
+    border-radius: 2px;
+  }
+
+  .content:nth-child(3n-1) .number-title::after {
+    border: 2px solid #ffffff;
+  }
+}
+
 .content-title {
   text-transform: uppercase;
   font-size: 23px;
@@ -207,10 +472,47 @@ body {
   letter-spacing: 1.15px;
 }
 
+@media (min-width: 601px) {
+  .content-title {
+    font-size: 32px;
+    letter-spacing: 1.6px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-title {
+    font-size: 36px;
+    letter-spacing: 1.8px;
+    line-height: 44px;
+  }
+}
+
+.players .content:nth-child(3n-1) .number-title {
+  color: #8765dd;
+}
+
 .content-text {
   font-size: 15px;
   line-height: 18px;
-  letter-spacing: 0.75px;
+  letter-spacing: 0.8px;
+}
+
+@media (min-width: 601px) {
+  .content-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.content:nth-child(3n-1) .content-text {
+  color: #ffffff;
 }
 
 /* .features {
@@ -218,9 +520,22 @@ body {
   width: 100%;
 } */
 
-.features-container {
+/* .features-container {
   position: relative;
   z-index: 1;
+} */
+
+@media (min-width: 1200px) {
+  .features-container{
+    display: flex;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .features-container:nth-child(2n+2) .quadro-position {
+    order: 1;
+  }
 }
 
 .features-pictures {
@@ -232,6 +547,12 @@ body {
   position: relative;
 }
 
+@media (min-width: 1200px) {
+  .quadro-position{
+    max-width: 50%;
+  }
+}
+
 .features-number {
   display: flex;
   justify-content: center;
@@ -240,6 +561,7 @@ body {
   height: 70px;
   letter-spacing: 0.7px;
   font-size: 14px;
+  font-weight: bold;
   position: absolute;
   bottom: -10px;
   left: 20px;
@@ -259,8 +581,63 @@ body {
   border-radius: 1.5px;
 }
 
+@media (min-width: 601px) {
+  .features-number {
+    width: 116px;
+    height: 116px;
+    letter-spacing: 1.2px;
+    font-size: 24px;
+    bottom: -30px;
+    left: 30px;
+  }
+
+  .features-number::after {
+    bottom: 40px;
+    left: 43px;
+    width: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features-number {
+    width: 168px;
+    height: 155px;
+    letter-spacing: 1.2px;
+    font-size: 24px;
+    /* bottom: 43%; */
+    bottom: 50%;
+    left: 91.25%;
+  }
+
+  .features-number::after {
+    bottom: 35%;
+    left: 68px;
+  }
+
+  .features-container:nth-child(2n+2) .features-number {
+    left: -8.75%;
+  }
+}
+
 .container-features-title {
   padding: 37px 20px 70px 20px;
+}
+
+@media (min-width: 601px) {
+  .container-features-title {
+    padding: 90px 30px 100px 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-features-title {
+    padding: 261px 0px 0px 126px;
+    /* max-width: 635px; */
+    width: 50%;
+    box-sizing: border-box;
+  }
 }
 
 .features-title {
@@ -278,6 +655,27 @@ body {
   letter-spacing: 0.8px;
 }
 
+@media (min-width: 601px) {
+  .features-title {
+    font-size: 80px;
+    line-height: 60px;
+    letter-spacing: 0;
+  }
+
+  .features-text {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features-text {
+    width: 78%;
+    margin-top: 110px;
+  }
+}
+
 
 .footer {
   background-color: #6d6e77;
@@ -287,6 +685,24 @@ body {
   background-size: cover;
   padding: 100px 20px 10px 20px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 601px) {
+  .footer {
+    background-image: url("https://raw.githubusercontent.com/b3lan/MQ18-Diplom/master/images/game_1280.jpg");
+    padding: 126px 30px 24px 30px;
+    background-position: center top;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    background-image: url("https://raw.githubusercontent.com/b3lan/MQ18-Diplom/master/images/game_1920.jpg");
+    padding: 229px 30px 52px 30px;
+    background-position: center top;
+  }
 }
 
 .footer::after {
@@ -301,6 +717,18 @@ body {
   opacity: 0.9;
 }
 
+.footer-main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+  .footer-main {
+    display: flex;
+    margin-bottom: 151px;
+  }
+}
+
 .artwork {
   position: relative;
   display: flex;
@@ -310,8 +738,22 @@ body {
   margin-left: auto;
   width: 56px;
   fill: #ffffff;
-  background: linear-gradient(180deg, #7751DB 0%, #50329C 100%);;
-  border-radius: 17px;
+  background: linear-gradient(180deg, #7751DB 0%, #50329C 100%);
+  border-radius: 25%;
+}
+
+@media (min-width: 601px) {
+  .artwork {
+    padding: 24px 16px 24px 16px;
+    width: 100px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .artwork {
+    margin-right: 36px;
+  }
 }
 
 .footer-container {
@@ -321,7 +763,7 @@ body {
   margin-bottom: 77px;
   text-transform: uppercase;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .footer-title {
@@ -341,9 +783,57 @@ body {
   letter-spacing: 0.7px;
 }
 
+@media (min-width: 601px) {
+  .footer-container {
+    margin-top: 83px;
+    margin-bottom: 288px;
+  }
+
+  .footer-title {
+    font-size: 80px;
+    letter-spacing: 3.4px; /* в макете 4.4 */
+  }
+
+  .footer-text {
+    font-size: 36px;
+    letter-spacing: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+  }
+
+  .footer-title {
+    font-size: 80px;
+    letter-spacing: 3.4px;
+  }
+
+  .footer-text {
+    font-size: 30px;
+    letter-spacing: 0.7px;
+  } 
+}
+
 .footer .container-button:nth-child(2n) {
   margin-bottom: 82px;
 }
+
+@media (min-width: 601px) {
+  .footer .container-button:nth-child(2n) {
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer .container-button:nth-child(2n) {
+    margin-bottom: 262px;
+  }
+}
+
 
 /* или вот так можно сделать
 .footer .logo {
