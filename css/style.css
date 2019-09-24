@@ -720,7 +720,11 @@ body {
   }
 
   .features-container:nth-child(2n+2) .container-features-title {
-    padding: 261px 3% 0px 10%;
+    padding: 13% 3% 0px 10%;
+  }
+
+  .features-title {
+    margin: 0px;
   }
 
   .features-container:nth-child(2n+2) .features-title {
